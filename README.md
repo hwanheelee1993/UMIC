@@ -7,4 +7,6 @@ This repository provides an unferenced image captioning metric from our ACL 2021
 <h3> 1. Install Prerequisites </h3>
 We used the Docker image provided by [official repo for UNITER](https://github.com/ChenRocks/UNITER). Using the guideline in the repo, please install the docker.
 
+<h3> 2. Download the Visual Features </h3>
+
 
