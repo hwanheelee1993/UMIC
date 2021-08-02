@@ -55,7 +55,7 @@ batch_size = 100
 hevalf = '/captions/'+args.data_type+'.pkl'
 
 with open(hevalf, 'rb') as f:
-    out_dict = pickle.load(f)
+    out_dict = json.load(f)
     
 checkpoint = args.ckpt
 
@@ -114,5 +114,5 @@ oscores = p_scores
 sgscores = [sigmoid(x) for x in oscores]
 
 # Save the scores
-with open('./scores/'+args.data_type+'.pkl', 'wb') as f:
-    pickle.dump(sgscores, f)
+with open('./scores/'+args.data_type+'.json', 'wb') as f:
+    json.dump(sgscores, f)
