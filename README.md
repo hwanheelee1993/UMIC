@@ -11,10 +11,18 @@ In the next few weeks, we try to release the version without using the docker.
 We used the Docker image provided by the official repo of UNITER. Using the guideline in the repo, please install the docker.
 
 <h3> 2. Download the Visual Features </h3>
+For image captioning task, COCO dataset is widely used. To download the visual features for coco captions, just download the image features for coco validation splits using the following command. <br>
+
+```
+wget https://acvrpublicycchen.blob.core.windows.net/uniter/img_db/coco_val2014.tar
+```
+
+Please refer to the offical repo of UNITER for downloading other visual features. <br>
 
 <h3> 3. Pre-processing the Textual Features (Captions) </h3>
-The format of textual feature file is as follows: <br>
-
+The format of textual feature file(python dictionary, json format) is as follows: <br>
+'cands' : [list of candidate captions] <br>
+'img_fs' : [list of image file names] <br>
 
 <h3> 4. Running the Script </h3>
 
