@@ -16,8 +16,15 @@ We used the Docker image provided by the official repo of UNITER. Using the guid
 
 <h3> 4. Running the Script </h3>
 
+1) Launching Docker
 ```
 source launch_activate.sh $PATH_TO_STORAGE
-python compute_correlation.py \ <br>
+```
+
+2) Compute Score
+```
+python compute_correlation.py --data_type \ <br>
+                              --ckpt /storage/umic.pt \ <br>
+                              --img_type \ coco_val2014 \ <br>
 ```
 
