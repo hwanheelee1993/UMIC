@@ -15,8 +15,9 @@ We used the Docker image provided by the official repo of UNITER. Using the guid
 <h3> 3. Pre-processing the Textual Features (Captions) </h3>
 
 <h3> 4. Running the Script </h3>
-source launch_activate.sh $PATH_TO_STORAGE
 
-''''
+```
+source launch_activate.sh $PATH_TO_STORAGE
 python compute_correlation.py \ <br>
-''''
+```
+
