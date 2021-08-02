@@ -23,7 +23,7 @@ source launch_activate.sh $PATH_TO_STORAGE
 
 2) Compute Score
 ```
-python compute_correlation.py --data_type capeval1k \
+python compute_score.py --data_type capeval1k \
                               --ckpt /storage/umic.pt \
                               --img_type \ coco_val2014 \
 ```
