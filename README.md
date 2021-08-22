@@ -2,40 +2,56 @@
 This repository provides an unferenced image captioning metric from our ACL 2021 paper [UMIC: An Unreferenced Metric for Image Captioning via Contrastive Learning](https://aclanthology.org/2021.acl-short.29.pdf). <br> Here, we provide the code to compute UMIC.
 
 
-<h2> Usage (Updating Some Files and Guidelines until 8/22) </h2>
-
-Our code is based on [UNITER](https://github.com/ChenRocks/UNITER). Therefore, please follow the install guideline for using Docker to load UNITER.
-In the next few weeks, we try to release the version without using the docker.
+<h2> Usage (Updating the Guidelines until 8/23) </h2>
 
 <h3> 1. Install Prerequisites </h3>
-We used the Docker image provided by the official repo of UNITER. Using the guideline in the repo, please install the docker.
 
-<h3> 2. Download the Visual Features </h3>
-For image captioning task, COCO dataset is widely used. To download the visual features for coco captions, just download the image features for coco validation splits using the following command. <br>
+Create a python 3.6 environment and then install the requirements.
+
+
+Install packages using "requirements.txt"
 
 ```
-wget https://acvrpublicycchen.blob.core.windows.net/uniter/img_db/coco_val2014.tar
+conda create -name kpqa python=3.6
+pip install -r requirements.txt
 ```
 
-Please refer to the offical repo of UNITER for downloading other visual features. <br>
+<h3> 2. Download the Pretrained Model </h3>
+http://milabfile.snu.ac.kr:15000/sharing/olgG6mfpD <br>
+Download the "umic.pt" and extract it. (default directory in the code is "./ckpt")
 
-<h3> 3. Pre-processing the Textual Features (Captions) </h3>
+<h3> 2. Download the Precomputed Visual Features </h3>
+1) Coco Val 2014 - For CapEval1k, COCO captioning, Composite COCO <br>
+http://milabfile.snu.ac.kr:15000/sharing/5dDeNuXlm <br>
+2) Flickr8k <br>
+http://milabfile.snu.ac.kr:15000/sharing/JeeaZ6dYi <br>
+3) Flickr30k <br>
+http://milabfile.snu.ac.kr:15000/sharing/6Rc7T0aAh <br>
+4) Pascal50s <br>
+http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
+
+Please refer to the offical repo of UNITER for computing other visual features. <br>
+
+<h3> 3. Pre-processing the Textual Features (Captions) - Updating </h3>
 The format of textual feature file(python dictionary, json format) is as follows: <br>
 'cands' : [list of candidate captions] <br>
 'img_fs' : [list of image file names] <br>
 
+Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
+
+```
+python make_txt_db.py --input_file '.sample.json'
+```
+
 <h3> 4. Running the Script </h3>
 
-1) Launching Docker
-```
-source launch_activate.sh $PATH_TO_STORAGE
-```
 
 2) Compute Score
 ```
-python compute_score.py --data_type capeval1k \
-                              --ckpt /storage/umic.pt \
-                              --img_type \ coco_val2014 \
+python compute_score.py --img_db $IMG_DB_DIR \
+                              --txt_db $TXT_DB_DIR \
+                              --out_file $OUT_FILE_NAME(.json format) \
+                              --ckpt $CKPT_DIR (default is ckpt/umic.pt)
 ```
 
 
