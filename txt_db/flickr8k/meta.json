@@ -1,0 +1,1 @@
+{"annotations": ["/ssd2/yenchun/ANNOTATIONS/Image-Text-Matching/coco_val.json"], "output": "/ssd2/yenchun/TXT_DB_LMDB/itm_coco_val_base-cased.db", "format": "lmdb", "task": "ce_flickr8k", "bert": "bert-base-cased", "UNK": 100, "CLS": 101, "SEP": 102, "MASK": 103, "v_range": [106, 28996]}
