@@ -44,7 +44,7 @@ Please refer to 'sample.json' as an example format <br>.
 Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
 
 ```
-python make_txt_db.py --input_file '.sample.json' \
+python make_txt_db.py --input_file $INPUT_JSON_FILE \
                       --img_type $IMG_DATSET_NAME (e.g. 'coco_val2014' for capeval1k) \
                       --out_dir $PATH_TO_OUTPUT_DIR
 ```
