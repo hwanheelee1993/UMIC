@@ -36,14 +36,17 @@ Please refer to the offical repo of UNITER for computing other visual features. 
 We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
 For processing new captionions, please process the data as follows. <br><br>
 
-The format of textual feature file(python dictionary, json format) is as follows: <br>
-'cands' : [list of candidate captions] <br>
-'img_fs' : [list of image file names] <br>
+The format of textual feature file(python dictionary, json format) is list of the dictionary as follows: <br>
+'caption' : [candidate catpion] <br>
+'imgid' : [image id for the caption in each dataset] <br>
+Please refer to 'sample.json' as an example format <br>.
 
 Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
 
 ```
-python make_txt_db.py --input_file '.sample.json'
+python make_txt_db.py --input_file '.sample.json' \
+                      --img_type $IMG_DATSET_NAME (e.g. 'coco_val2014' for capeval1k) \
+                      --out_dir $PATH_TO_OUTPUT_DIR
 ```
 
 <h3> 5. Running the Script </h3>
