@@ -12,7 +12,7 @@ Create a python 3.6 environment and then install the requirements.
 Install packages using "requirements.txt"
 
 ```
-conda create -name kpqa python=3.6
+conda create -name umic python=3.6
 pip install -r requirements.txt
 ```
 
