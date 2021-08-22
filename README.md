@@ -48,16 +48,12 @@ python make_txt_db.py --input_file '.sample.json'
 
 <h3> 4. Running the Script </h3>
 
-
-2) Compute Score
 ```
 python compute_score.py --img_db $IMG_DB_DIR \
                               --txt_db $TXT_DB_DIR \
                               --out_file $OUT_FILE_NAME(.json format) \
                               --ckpt $CKPT_DIR (default is ckpt/umic.pt)
 ```
-
-
 
 ## Reference
 
