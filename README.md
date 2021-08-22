@@ -20,7 +20,7 @@ pip install -r requirements.txt
 http://milabfile.snu.ac.kr:15000/sharing/olgG6mfpD <br>
 Download the "umic.pt" and extract it. (default directory in the code is "./ckpt")
 
-<h3> 2. Download the Precomputed Visual Features </h3>
+<h3> 3. Download the Precomputed Visual Features </h3>
 1) Coco Val 2014 - For CapEval1k, COCO captioning, Composite COCO <br>
 http://milabfile.snu.ac.kr:15000/sharing/5dDeNuXlm <br>
 2) Flickr8k <br>
@@ -32,7 +32,7 @@ http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
 
 Please refer to the offical repo of UNITER for computing other visual features. <br>
 
-<h3> 3. Pre-processing the Textual Features (Captions) - Updating </h3>
+<h3> 4. Pre-processing the Textual Features (Captions) - Updating </h3>
 We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
 For processing new captionions, please process the data as follows. <br><br>
 
@@ -46,7 +46,8 @@ Using the '.json' format that has the list composted of these dictionaries, plea
 python make_txt_db.py --input_file '.sample.json'
 ```
 
-<h3> 4. Running the Script </h3>
+<h3> 5. Running the Script </h3>
+For each image-caption pair, please compute the score using the follwing script.
 
 ```
 python compute_score.py --img_db $IMG_DB_DIR \
