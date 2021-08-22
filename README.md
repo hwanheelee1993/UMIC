@@ -32,7 +32,7 @@ http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
 
 Please refer to the offical repo of UNITER for computing other visual features. <br>
 
-<h3> 4. Pre-processing the Textual Features (Captions) - Updating </h3>
+<h3> 4. Pre-processing the Textual Features (Captions) </h3>
 We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
 For processing new captionions, please process the data as follows. <br><br>
 
