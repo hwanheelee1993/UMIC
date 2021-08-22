@@ -33,6 +33,9 @@ http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
 Please refer to the offical repo of UNITER for computing other visual features. <br>
 
 <h3> 3. Pre-processing the Textual Features (Captions) - Updating </h3>
+We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
+For processing new captionions, please process the data as follows. <br><br>
+
 The format of textual feature file(python dictionary, json format) is as follows: <br>
 'cands' : [list of candidate captions] <br>
 'img_fs' : [list of image file names] <br>
