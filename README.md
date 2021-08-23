@@ -37,7 +37,7 @@ http://milabfile.snu.ac.kr:15000/sharing/6Rc7T0aAh <br>
 http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
 Download the files and extract it to the place that has enough space.<br>
 
-Please refer to the offical repo of [UNITER](https://github.com/ChenRocks/BUTD-UNITER-NLVR2) for computing other visual features. <br>
+Please refer to the offical repo of [UNITER](https://github.com/ChenRocks/BUTD-UNITER-NLVR2) for computing the visual features for other datasets using the raw image. <br>
 
 <h3> 4. Pre-processing the Textual Features (Captions) </h3>
 We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
