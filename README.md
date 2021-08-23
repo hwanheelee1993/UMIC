@@ -4,6 +4,12 @@ This repository provides an unferenced image captioning metric from our ACL 2021
 
 <h2> Usage </h2>
 
+In summary, there are three things you need to do for running the code. <br>
+First, you need download the pretrained checkpoint (about 220MB) of UMIC. <br>
+Second, download the pre-computed visual features(img_db) for the dataset you want to compute the score. <br>
+Finally, run the preprocess code for your candidate captions to make textual features(txt_db). <br>
+Then you can easily compute the "img_db" and "txt_db" for your image-caption pairs using the "compute_score.py".
+
 <h3> 1. Install Prerequisites </h3>
 
 Create a python 3.6 environment and then install the requirements.
