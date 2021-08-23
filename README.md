@@ -52,6 +52,7 @@ python make_txt_db.py --input_file $INPUT_JSON_FILE \
 
 <h3> 5. Running the Script </h3>
 For each image-caption pair, please compute the score using the follwing script.
+For example, if you want to compute the score for COCO captioning test set, you can use img_db for *coco_val2014* and use the txt_db for your own prediction results.
 
 ```
 python compute_score.py --img_db $IMG_DB_DIR \
