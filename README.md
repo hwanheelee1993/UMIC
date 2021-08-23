@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 <h3> 2. Download the Pretrained Model </h3>
 http://milabfile.snu.ac.kr:15000/sharing/olgG6mfpD <br>
-Download the "umic.pt" and extract it. (default directory in the code is "./ckpt")
+Download the "umic.tar.gz" and extract it. (default directory in the code is "./ckpt")
 
 <h3> 3. Download the Precomputed Visual Features </h3>
 1) Coco Val 2014 - For CapEval1k, COCO captioning, Composite COCO <br>
@@ -35,6 +35,7 @@ http://milabfile.snu.ac.kr:15000/sharing/JeeaZ6dYi <br>
 http://milabfile.snu.ac.kr:15000/sharing/6Rc7T0aAh <br>
 4) Pascal50s <br>
 http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
+Download the files and extract it to the place that has enough space.
 
 Please refer to the offical repo of UNITER for computing other visual features. <br>
 
