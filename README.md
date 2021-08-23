@@ -39,8 +39,8 @@ For processing new captions, please process the data as follows. <br><br>
 The format of textual feature file(python dictionary, json format) is a list of the dictionary like the below. <br>
 'caption' : [candidate catpion] <br>
 'imgid' : [image id for the caption in each dataset.] <br>
-Please refer to 'sample.json' as an example format <br>.
-Note that we regard the image file name as **dataset_name**_**image_id**.jpg following the coco dataset. <br>
+Please refer to 'sample.json' as an example format. <br>
+Note that we regard each image file name as **dataset_name**_**image_id**.jpg following the coco dataset. <br>
 
 Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
 
