@@ -1,21 +1,19 @@
 # UMIC
-This repository provides an unferenced image captioning metric from our ACL 2021 paper [UMIC: An Unreferenced Metric for Image Captioning via Contrastive Learning](https://aclanthology.org/2021.acl-short.29.pdf). <br> Here, we provide the code to compute UMIC.
+This repository provides an implementation for the unferenced image captioning metric presented in our ACL 2021 paper [UMIC: An Unreferenced Metric for Image Captioning via Contrastive Learning](https://aclanthology.org/2021.acl-short.29.pdf). 
 
 
 <h2> Usage </h2>
 
-In summary, there are three things you need to do for running the code. <br>
-First, you need to download the pretrained checkpoint (about 220MB) of UMIC. <br>
-Second, download the pre-computed visual features(img_db) for the dataset you want to compute the score. <br>
-Finally, run the preprocess code for your candidate captions to make textual features(txt_db). <br>
-Then you can easily compute the scores for your image-caption pairs using the "compute_score.py".
+There are 3 steps for running the code:
+1. Download the pretrained checkpoint (about 220MB) of UMIC. 
+2. Download the pre-computed visual features(img_db) for the dataset you want to compute the score.
+3. Run the preprocess code for your candidate captions to make textual features(txt_db).
+
+Then you can easily compute the scores for your image-caption pairs using the `compute_score.py`.
 
 <h3> 1. Install Prerequisites </h3>
 
-Create a python 3.6 environment and then install the requirements.
-
-
-Install packages using "requirements.txt"
+Create a Python 3.6 environment and then install the requirements from `requirements.txt`:
 
 ```
 conda create -name umic python=3.6
@@ -23,30 +21,28 @@ pip install -r requirements.txt
 ```
 
 <h3> 2. Download the Pretrained Model </h3>
-http://milabfile.snu.ac.kr:15000/sharing/olgG6mfpD <br>
-Download the "umic.tar.gz" and extract it. (default directory in the code is "./ckpt")
+
+Download [umic.tar.gz](https://archive.org/download/umic_data/umic.pt) and extract it. (the default directory in the code is `./ckpt`)
 
 <h3> 3. Download the Precomputed Visual Features </h3>
-1) Coco Val 2014 - For CapEval1k, COCO captioning, Composite COCO <br>
-http://milabfile.snu.ac.kr:15000/sharing/5dDeNuXlm <br>
-2) Flickr8k <br>
-http://milabfile.snu.ac.kr:15000/sharing/JeeaZ6dYi <br>
-3) Flickr30k <br>
-http://milabfile.snu.ac.kr:15000/sharing/6Rc7T0aAh <br>
-4) Pascal50s <br>
-http://milabfile.snu.ac.kr:15000/sharing/aWfIMkXwR <br>
-Download the files and extract it to the place that has enough space.<br>
 
-Please refer to the offical repo of [UNITER](https://github.com/ChenRocks/BUTD-UNITER-NLVR2) for computing the visual features for other datasets using the raw image. <br>
+1. [Coco Val 2014 - For CapEval1k, COCO captioning, Composite COCO](https://archive.org/download/umic_data/coco_val2014.tar.gz) 
+2. [Flickr8k](https://archive.org/download/umic_data/flickr8k.tar.gz) 
+3. [Flickr30k](https://archive.org/download/umic_data/flickr30k.tar.gz)
+4. [Pascal50s](https://archive.org/download/umic_data/pascal50s.tar.gz)
+
+Please refer to the offical repo of [UNITER](https://github.com/ChenRocks/BUTD-UNITER-NLVR2) for computing the visual features for other datasets using the raw image. 
 
 <h3> 4. Pre-processing the Textual Features (Captions) </h3>
-We provide the processed version for four datasets we used in the paper in *txt_db* dir. <br>
-For processing new captions, please process the data as follows. <br><br>
 
-The format of textual feature file(python dictionary, json format) is a list of the dictionary like the below. <br>
-'caption' : [candidate catpion] <br>
-'imgid' : [image id for the caption in each dataset.] <br>
-Please refer to 'sample.json' as an example format. <br>
+We provide the processed version for four datasets we used in the paper in `txt_db` dir. <br>
+To process new captions, please process the data as follows. <br><br>
+
+The format of textual feature file(python dictionary, json format) is a list of the dictionary like the below:
+- 'caption' : [candidate catpion] 
+- 'imgid' : [image id for the caption in each dataset.]
+
+Please refer to `sample.json` as an example format. <br>
 Note that we regard each image file name as **dataset_name**_**image_id**.jpg following the coco dataset. <br>
 
 Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
@@ -70,7 +66,7 @@ python compute_score.py --img_db $IMG_DB_DIR \
 
 ## Reference
 
-If you find this repo useful, please consider citing:
+If you find this repo useful, please consider citing our [ACL 2021 paper](https://aclanthology.org/2021.acl-short.29.pdf):
 
 ```
 @inproceedings{lee-etal-2021-umic,
@@ -89,6 +85,5 @@ If you find this repo useful, please consider citing:
     doi = "10.18653/v1/2021.acl-short.29",
     pages = "220--226",
 }
-
 ```
 
