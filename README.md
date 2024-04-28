@@ -1,5 +1,5 @@
 # UMIC
-This repository provides an implementation for the unferenced image captioning metric presented in our ACL 2021 paper [UMIC: An Unreferenced Metric for Image Captioning via Contrastive Learning](https://aclanthology.org/2021.acl-short.29.pdf). 
+This repository provides an implementation for the unreferenced image captioning metric presented in our ACL 2021 paper [UMIC: An Unreferenced Metric for Image Captioning via Contrastive Learning](https://aclanthology.org/2021.acl-short.29.pdf). 
 
 
 <h2> Usage </h2>
@@ -38,14 +38,14 @@ Please refer to the offical repo of [UNITER](https://github.com/ChenRocks/BUTD-U
 We provide the processed version for four datasets we used in the paper in `txt_db` dir. <br>
 To process new captions, please process the data as follows. <br><br>
 
-The format of textual feature file(python dictionary, json format) is a list of the dictionary like the below:
-- 'caption' : [candidate catpion] 
-- 'imgid' : [image id for the caption in each dataset.]
+The format of textual feature file (Python dictionary JSON format) is a list of the dictionary like the below:
+- `caption` : [candidate caption] 
+- `imgid` : [image id for the caption in each dataset.]
 
 Please refer to `sample.json` as an example format. <br>
 Note that we regard each image file name as **dataset_name**_**image_id**.jpg following the coco dataset. <br>
 
-Using the '.json' format that has the list composted of these dictionaries, please preprocess the file using the following command.
+Using the JSON format that has the list composted of these dictionaries, please preprocess the file using the following command.
 
 ```
 python make_txt_db.py --input_file $INPUT_JSON_FILE \
